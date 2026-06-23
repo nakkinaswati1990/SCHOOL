@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration | PM SHRI Kendriya Vidyalaya Srikakulam</title>
+    <meta name="description" content="Apply online to register for PM SHRI Kendriya Vidyalaya Srikakulam. Simple central government admission registration portal.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Navbar -->
+    <header class="navbar-header">
+        <div class="nav-container">
+            <a href="index.html" class="logo-area">
+                <img src="assets/logo.png" alt="KVS Logo" class="logo-img">
+                <img src="assets/pm_shri_logo.png" alt="PM SHRI Logo" class="logo-img pm-shri-logo">
+                <span class="logo-text">PM SHRI KV<span>SRIKAKULAM</span></span>
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#academics" class="nav-link">Academics</a>
+                <a href="index.html#calculator" class="nav-link">Fees</a>
+                <a href="index.html#life" class="nav-link">Campus Life</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+                <a href="#" class="nav-link active">Register</a>
+                <a href="#" class="btn btn-primary btn-sm mobile-only-btn active">Register Now</a>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Theme Toggle Button -->
+                <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Theme">
+                    <!-- Sun Icon -->
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+                    </svg>
+                    <!-- Moon Icon -->
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                    </svg>
+                </button>
+
+                <a href="#" class="btn btn-primary btn-sm desktop-only-btn active">Register Now</a>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Registration Section -->
+    <section class="registration-section section-padding">
+        <div class="hero-bg-glow"></div>
+        <div class="container registration-container">
+            <!-- Sidebar: Registration Progress Timeline -->
+            <div class="registration-sidebar">
+                <div class="sidebar-header">
+                    <span class="info-tag">Admissions Portal</span>
+                    <h2>KV Registration</h2>
+                    <p>Register the student details for admissions allocation at PM SHRI KV Srikakulam.</p>
+                </div>
+                
+                <div class="progress-steps-list">
+                    <div class="step-progress-item active" id="progressStep1">
+                        <div class="progress-dot-wrapper">
+                            <span class="progress-dot">1</span>
+                        </div>
+                        <div class="step-info">
+                            <strong>Student Profile</strong>
+                            <span>Personal and grade parameters</span>
+                        </div>
+                    </div>
+                    <div class="step-progress-item" id="progressStep2">
+                        <div class="progress-dot-wrapper">
+                            <span class="progress-dot">2</span>
+                        </div>
+                        <div class="step-info">
+                            <strong>Parental Details</strong>
+                            <span>Service class and phone details</span>
+                        </div>
+                    </div>
+                    <div class="step-progress-item" id="progressStep3">
+                        <div class="progress-dot-wrapper">
+                            <span class="progress-dot">3</span>
+                        </div>
+                        <div class="step-info">
+                            <strong>Preferences & VVN</strong>
+                            <span>Bus services, labs, and activities</span>
+                        </div>
+                    </div>
+                    <div class="step-progress-item" id="progressStep4">
+                        <div class="progress-dot-wrapper">
+                            <span class="progress-dot">4</span>
+                        </div>
+                        <div class="step-info">
+                            <strong>Review & Submit</strong>
+                            <span>Quarterly fee calculation details</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Panel: Registration Form -->
+            <div class="registration-form-panel">
+                <form id="registrationForm" class="contact-form">
+                    
+                    <!-- STEP 1: Student Information -->
+                    <div class="form-step-panel active" id="stepPanel1">
+                        <div class="panel-header">
+                            <h2>Student Information</h2>
+                            <p>Enter details of the student seeking admission to Kendriya Vidyalaya.</p>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="input-field">
+                                <label for="regStudentName">Student's Full Name</label>
+                                <input type="text" id="regStudentName" placeholder="e.g. Jane Doe" required>
+                            </div>
+                            <div class="input-field">
+                                <label for="regStudentDob">Date of Birth</label>
+                                <input type="date" id="regStudentDob" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="input-field">
+                                <label for="regStudentGender">Gender</label>
+                                <select id="regStudentGender" required>
+                                    <option value="" disabled selected>Select Gender</option>
+                                    <option value="female">Female</option>
+                                    <option value="male">Male</option>
+                                    <option value="nonbinary">Non-Binary</option>
+                                    <option value="other">Prefer not to say</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label for="regStudentGrade">Applying for Class</label>
+                                <select id="regStudentGrade" required>
+                                    <option value="" disabled selected>Select Target Class</option>
+                                    <option value="primary" data-price="500">Primary Division (Class I-V)</option>
+                                    <option value="middle" data-price="600">Secondary Division (Class VI-X)</option>
+                                    <option value="high" data-price="650">Senior Secondary Commerce (Class XI-XII)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="regStudentSchool">Last School Attended (TC details)</label>
+                            <input type="text" id="regStudentSchool" placeholder="e.g. KV Delhi Cantt / Private Convent">
+                        </div>
+
+                        <div class="form-navigation-actions">
+                            <button type="button" class="btn btn-primary btn-next" data-next="2">Next: Parent Details</button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2: Parent & Guardian Details -->
+                    <div class="form-step-panel" id="stepPanel2">
+                        <div class="panel-header">
+                            <h2>Parental & Guardian Details</h2>
+                            <p>Provide central/state government employment details for service priority.</p>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="input-field">
+                                <label for="regParentName">Parent's Full Name</label>
+                                <input type="text" id="regParentName" placeholder="e.g. John Doe" required>
+                            </div>
+                            <div class="input-field">
+                                <label for="regParentEmail">Parent's Email Address</label>
+                                <input type="email" id="regParentEmail" placeholder="e.g. john@example.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="input-field">
+                                <label for="regParentPhone">Primary Mobile Number</label>
+                                <input type="tel" id="regParentPhone" placeholder="e.g. +91 98765 43210" required>
+                            </div>
+                            <div class="input-field">
+                                <label for="regEmergencyPhone">Emergency Mobile Number</label>
+                                <input type="tel" id="regEmergencyPhone" placeholder="e.g. +91 98765 45678" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="input-field">
+                                <label for="regParentCategory">Service Category Priority</label>
+                                <select id="regParentCategory" required>
+                                    <option value="" disabled selected>Select Category</option>
+                                    <option value="cat1">Category I - Central Gov / Defense Employees</option>
+                                    <option value="cat2">Category II - Central PSUs / Autonomous bodies</option>
+                                    <option value="cat3">Category III - State Government Employees</option>
+                                    <option value="cat4">Category IV - State PSUs / Autonomous bodies</option>
+                                    <option value="cat5">Category V - General / Private Employees</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label for="regSgc">Single Girl Child (SGC) quota?</label>
+                                <select id="regSgc">
+                                    <option value="no">No</option>
+                                    <option value="yes">Yes, SGC Candidate</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="regAddress">Residential Address in Srikakulam</label>
+                            <textarea id="regAddress" rows="3" placeholder="Quarter No, Area details, Srikakulam, AP, ZIP Code" required></textarea>
+                        </div>
+
+                        <div class="form-navigation-actions">
+                            <button type="button" class="btn btn-secondary btn-prev" data-prev="1">Back</button>
+                            <button type="button" class="btn btn-primary btn-next" data-next="3">Next: Preferences</button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3: Preferences & VVN Options -->
+                    <div class="form-step-panel" id="stepPanel3">
+                        <div class="panel-header">
+                            <h2>Preferences & VVN Options</h2>
+                            <p>Select bus transport routes and elective preferences for computational fees.</p>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="input-field">
+                                <label for="regTransport">KV School Bus Shuttle</label>
+                                <select id="regTransport">
+                                    <option value="none" data-price="0">No, Private Arrangement - ₹0/mo</option>
+                                    <option value="standard" data-price="800">Standard Town Route - ₹800/mo</option>
+                                    <option value="door" data-price="1200">Extended Suburb Route - ₹1,200/mo</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label for="regDining">Informatics Elective Fee</label>
+                                <select id="regDining">
+                                    <option value="none" data-price="0">No Computer Elective - ₹0/mo</option>
+                                    <option value="standard" data-price="150">Informatics Computer Fee - ₹150/mo</option>
+                                    <option value="premium" data-price="300">Specialist Coding Elective - ₹300/mo</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="checkbox-group">
+                            <label>Co-Curricular Clubs</label>
+                            <div class="checkbox-options">
+                                <label class="checkbox-container">
+                                    <input type="checkbox" class="reg-club-cb" data-price="50" data-name="Scouts & Guides">
+                                    <span class="checkmark"></span>
+                                    Scouts & Guides Unit (+₹50/mo)
+                                </label>
+                                <label class="checkbox-container">
+                                    <input type="checkbox" class="reg-club-cb" data-price="60" data-name="NCC Cadets">
+                                    <span class="checkmark"></span>
+                                    NCC Cadet Program (+₹60/mo)
+                                </label>
+                                <label class="checkbox-container">
+                                    <input type="checkbox" class="reg-club-cb" data-price="50" data-name="KV Sports Club">
+                                    <span class="checkmark"></span>
+                                    KV Sports & Athletics Club (+₹50/mo)
+                                </label>
+                                <label class="checkbox-container">
+                                    <input type="checkbox" class="reg-club-cb" data-price="40" data-name="Cultural Club">
+                                    <span class="checkmark"></span>
+                                    Fine Arts & Cultural Club (+₹40/mo)
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Government Certificates upload (Mockup)</label>
+                            <div class="file-upload-mockup">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" x2="12" y1="3" y2="15"></line></svg>
+                                <span>Upload Birth Certificate, Parent Service Certificate, or Transfer Certificate (TC)</span>
+                                <input type="file" id="regMockUpload" accept="application/pdf,image/*">
+                            </div>
+                        </div>
+
+                        <div class="form-navigation-actions">
+                            <button type="button" class="btn btn-secondary btn-prev" data-prev="2">Back</button>
+                            <button type="button" class="btn btn-primary btn-next" data-next="4">Next: Review Details</button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 4: Review & Submit -->
+                    <div class="form-step-panel" id="stepPanel4">
+                        <div class="panel-header">
+                            <h2>Review & Submit Enrollment</h2>
+                            <p>Verify registration details before sending files to Kendriya Vidyalaya Srikakulam.</p>
+                        </div>
+
+                        <div class="review-details-summary">
+                            <div class="review-block">
+                                <h3>Student Profile</h3>
+                                <p><strong>Name:</strong> <span id="revStudentName">-</span></p>
+                                <p><strong>Target Class:</strong> <span id="revGrade">-</span></p>
+                                <p><strong>DOB:</strong> <span id="revDob">-</span> | <strong>Gender:</strong> <span id="revGender">-</span></p>
+                            </div>
+
+                            <div class="review-block">
+                                <h3>Parent Profile</h3>
+                                <p><strong>Name:</strong> <span id="revParentName">-</span></p>
+                                <p><strong>Mobile:</strong> <span id="revParentPhone">-</span> | <strong>Email:</strong> <span id="revParentEmail">-</span></p>
+                            </div>
+
+                            <div class="review-block">
+                                <h3>Fee Breakdown (Estimated)</h3>
+                                <div class="review-breakdown-list">
+                                    <div class="rev-item">
+                                        <span>Quarterly VVN Fund</span>
+                                        <span id="revTuitionFee">₹0.00</span>
+                                    </div>
+                                    <div class="rev-item">
+                                        <span>Transport Bus Shuttle</span>
+                                        <span id="revTransportFee">₹0.00</span>
+                                    </div>
+                                    <div class="rev-item">
+                                        <span>Informatics computer fee</span>
+                                        <span id="revDiningFee">₹0.00</span>
+                                    </div>
+                                    <div class="rev-item">
+                                        <span>Co-curricular Clubs</span>
+                                        <span id="revClubsFee">₹0.00</span>
+                                    </div>
+                                    <div class="rev-divider"></div>
+                                    <div class="rev-total">
+                                        <span>Total Monthly Estimate</span>
+                                        <strong id="revTotalMonthly">₹0.00</strong>
+                                    </div>
+                                    <div class="rev-total-annual">
+                                        <span>Quarterly Term Fee (3 months total)</span>
+                                        <strong id="revTotalAnnual">₹0.00</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-navigation-actions">
+                            <button type="button" class="btn btn-secondary btn-prev" data-prev="3">Back</button>
+                            <button type="submit" class="btn btn-primary" id="regSubmitBtn">Submit KV Registration</button>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Success Overlay (Hidden by default) -->
+                <div class="form-success-overlay" id="regSuccessOverlay">
+                    <div class="success-content">
+                        <div class="success-icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                        </div>
+                        <h3>Admissions Form Submitted!</h3>
+                        <p>Your enrollment registration request has been successfully registered. (Application ID: <strong id="regReceiptId">#KVSK-REG-2026-9812</strong>).</p>
+                        
+                        <!-- Print Ticket Simulated Badge -->
+                        <div class="receipt-badge">
+                            <div class="receipt-header">
+                                <strong>PM SHRI KV SRIKAKULAM</strong>
+                                <span>Admissions Slip</span>
+                            </div>
+                            <div class="receipt-row">
+                                <span>Student</span>
+                                <strong id="ticketStudentName">Jane Doe</strong>
+                            </div>
+                            <div class="receipt-row">
+                                <span>Class Target</span>
+                                <strong id="ticketGrade">Class 10</strong>
+                            </div>
+                            <div class="receipt-row">
+                                <span>Academic Year</span>
+                                <strong>2026-2027</strong>
+                            </div>
+                        </div>
+
+                        <div class="success-actions">
+                            <button type="button" class="btn btn-primary" id="printReceiptBtn">Print Registration Slip</button>
+                            <a href="index.html" class="btn btn-secondary">Return to Home</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col brand">
+                <a href="index.html" class="logo-area">
+                    <img src="assets/logo.png" alt="KVS Logo" class="logo-img">
+                    <img src="assets/pm_shri_logo.png" alt="PM SHRI Logo" class="logo-img pm-shri-logo">
+                    <span class="logo-text">PM SHRI KV<span>SRIKAKULAM</span></span>
+                </a>
+                <p>Nurturing young minds through holistic central education. Empowering India's future leaders under the Ministry of Education.</p>
+            </div>
+            
+            <div class="footer-col links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#about">KV Mission & Motto</a></li>
+                    <li><a href="index.html#academics">School Divisions</a></li>
+                    <li><a href="index.html#calculator">VVN Fees Structure</a></li>
+                    <li><a href="index.html#life">Campus Co-curriculars</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col links">
+                <h4>Admissions</h4>
+                <ul>
+                    <li><a href="#">Apply Online</a></li>
+                    <li><a href="index.html#calculator">VVN Fee Calculator</a></li>
+                    <li><a href="index.html#contact">SGC Seat Inquiries</a></li>
+                    <li><a href="index.html#contact">Relocation Support</a></li>
+                    <li><a href="index.html#about">CBSE Course Catalog</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col newsletter">
+                <h4>Portal Information</h4>
+                <p>Ensure correct Category details (Cat I to V) are selected based on parent Central/State Gov service details.</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container fb-container">
+                <p>&copy; 2026 PM SHRI Kendriya Vidyalaya Srikakulam. All rights reserved.</p>
+                <p>Designed with care for future leaders. Under Ministry of Education, Govt of India.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script file -->
+    <script src="app.js"></script>
+</body>
+</html>
